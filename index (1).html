@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flozyo Website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0c0c0c;
+      color: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    header {
+      background: linear-gradient(to right, #191919, #0c0c0c);
+      padding: 3rem 2rem;
+      text-align: center;
+      opacity: 0;
+      filter: blur(10px);
+      animation: fadeInBlur 1.5s ease forwards;
+    }
+    @keyframes fadeInBlur {
+      to {
+        opacity: 1;
+        filter: blur(0);
+      }
+    }
+    nav {
+      background: #111;
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+      border-bottom: 1px solid #222;
+    }
+    nav a {
+      color: #ccc;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    nav a:hover {
+      color: #ffcc00;
+    }
+    section {
+      padding: 3rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 1s ease;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: #1a1a1a;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #2c2c2c;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(255, 204, 0, 0.2);
+    }
+    .card iframe, .card img {
+      width: 100%;
+      display: block;
+    }
+    .card h3 {
+      padding: 1rem;
+      font-size: 1.2rem;
+      color: #ffcc00;
+    }
+    .glass-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      padding: 2rem;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      flex: 1 1 250px;
+      max-width: 300px;
+      color: #fff;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+    .glass-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(255, 204, 0, 0.2);
+    }
+    .glass-card h3 {
+      color: #ffcc00;
+      margin-bottom: 0.5rem;
+    }
+    .faq {
+      margin-top: 2rem;
+    }
+    .faq details {
+      background: #1a1a1a;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      cursor: pointer;
+    }
+    .faq summary {
+      font-weight: 600;
+      color: #ffcc00;
+      outline: none;
+    }
+    .faq p {
+      margin-top: 0.5rem;
+    }
+    .contact-info p {
+      margin: 0.5rem 0;
+    }
+    a {
+      color: #ffcc00;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .socials a {
+      margin-right: 15px;
+      font-size: 1.5rem;
+    }
+    .socials img.roblox-icon {
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+      filter: brightness(0) saturate(100%) invert(77%) sepia(46%) saturate(372%) hue-rotate(1deg) brightness(105%) contrast(101%);
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #111;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My portofolio</h1>
+    <p>Hi I'm Flozyo I'm a Motion Designer • GUI & GFX Artist • Intro Creator</p>
+  </header>
+
+  <nav>
+    <a href="#projects">Projects</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="projects">
+    <h2>Featured Projects (videos not working 🥀)</h2>
+    <div class="grid">
+      <div class="card">
+        <iframe src="https://www.youtube.com/embed/W9O0H-7usR4" title="Pekora.zip Intro" frameborder="0" allowfullscreen></iframe>
+        <h3>Pekora.zip Official Intro</h3>
+      </div>
+      <div class="card">
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/ca3eaf178879231.64e257789c81c.png" alt="Game GUI Pack">
+        <h3>Game GUI Pack</h3>
+      </div>
+      <div class="card">
+        <iframe src="https://www.youtube.com/embed/YrZACwAFOvY" title="Animated Social Ad" frameborder="0" allowfullscreen></iframe>
+        <h3>Animated Social Ad</h3>
+      </div>
+      <div class="card">
+        <iframe src="https://www.tiktok.com/embed/v2/7351717795190344966" title="Pekosino TikTok Animation" frameborder="0" allowfullscreen></iframe>
+        <h3>Pekosino Game Animation (TikTok)</h3>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m Flozyo (Yahya Hamidi), a motion designer and GUI/GFX artist focused on bold visuals, cinematic intros, and crisp interactive design. I’ve created standout content like the iconic <strong>Pekora.zip intro</strong>, and I work across ads, GUI design, and interface motion.</p>
+    <div class="glass-grid">
+      <div class="glass-card">
+        <h3>Skills</h3>
+        <p>Motion Design, GUI, GFX, UX Concepts, Icons, Ads</p>
+      </div>
+      <div class="glass-card">
+        <h3>Experience</h3>
+        <p>Over Average — Trusted by Creators</p>
+      </div>
+      <div class="glass-card">
+        <h3>Pricing & Speed</h3>
+        <p>Fast Turnaround • Cheap & Flexible</p>
+      </div>
+      <div class="glass-card">
+        <h3>Projects Completed</h3>
+        <p>I’ve delivered over 100 projects and designs</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-info">
+      <p><strong>Business Email:</strong> Coming soon</p>
+    </div>
+    <div class="socials">
+      <a href="https://discord.com/users/1109563602488236102" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
+      <a href="https://www.linkedin.com/in/flozyo-hamidi/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.behance.net/yahyahamidi" target="_blank" title="Behance"><i class="fab fa-behance"></i></a>
+      <a href="https://www.deviantart.com/flozyorefl" target="_blank" title="DeviantArt"><i class="fab fa-deviantart"></i></a>
+      <a href="https://www.youtube.com/@FlozyoQuotes" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://twitter.com/yahyahamid24065" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.tiktok.com/@flozyoz" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+      <a href="https://www.roblox.com/users/3296357433/profile" target="_blank" title="Roblox"><img class="roblox-icon" src="https://img.icons8.com/?size=100&id=111924&format=png&color=000000" alt="Roblox"></a>
+    </div>
+
+    <div class="faq">
+      <h2>FAQ</h2>
+      <details>
+        <summary>💰 What are your price ranges?</summary>
+        <p>Prices range between <strong>$2 and $500</strong>, depending on the type of design or animation.</p>
+      </details>
+      <details>
+        <summary>🧾 What payment methods do you accept?</summary>
+        <p>I accept <strong>PayPal</strong>, <strong>Robux</strong>, and <strong>Discord Nitro gifts</strong> as payment methods.</p>
+      </details>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Flozyo. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll("section");
+    const options = { threshold: 0.1 };
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          obs.unobserve(entry.target);
+        }
+      });
+    }, options);
+    sections.forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>
